@@ -20,7 +20,7 @@ function formatDate(date) {
     currentMinutes = `0${currentMinutes}`;
   }
 
-  let formattedDate = `${currentDay} ${currentHour}:${currentMinutes}`;
+  let formattedDate = `${currentDay} ${currentHour}:${currentMinutes},`;
   return formattedDate;
 }
 let elementDate = document.querySelector("#current-time");
@@ -32,7 +32,18 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}ºC`;
+  
+  let descriptionElement=document.querySelector("#description");
+  descriptionElement.innerHTML=response.data.weather[0].description;
+
+  let humidityElement=document.querySelector("#humidity");
+  humidityElement.innerHTML=response.data.main.humidity;
+
+  let windElement=document.querySelector("#wind");
+  windElement.innerHTML=Math.round(response.data.wind.speed);
 }
+
+
 
 function submitCity(event) {
   event.preventDefault();
@@ -67,13 +78,3 @@ function retrievePosition(position) {
 
   axios.get(apiUrl).then(showCurrentTemperature);
 }
-
-//
-
-function currentLoc(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(retrievePosition);
-}
-
-let button = document.querySelector("#buttonj");
-button.addEventListener("click", currentLoc);

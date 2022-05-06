@@ -6,7 +6,7 @@ max-width: 800px;
 
 input{
     border-style: none;
-    background-color:rgb(254, 255, 165) ;
+    background-color:whitesmoke;
     border-radius: 20px;
     padding: 10px;
 }
@@ -24,6 +24,7 @@ border-radius: 10px;
 }
 .search-form {
   text-align: left;
+  
 }
 
 .btn{
