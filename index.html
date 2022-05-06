@@ -4,25 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scr/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>Weather App</title>
+    <link rel="stylesheet" href="scr/style.css" />
+    <script src="https://kit.fontawesome.com/d1e4f91c51.js" crossorigin="anonymous"></script>
   </head>
   <body>
       
-    <div id="root">
-    <div class="container">
-      <h1>Weather App</h1>
-     
+<div class="container">
+
+
+
+<div class="weather-app-wrapper">
+
+
+    
+        <div class="card-body">
+              <div class="container">
+
+                  <div class="row">
+
+                        <div class="col-md-8 search-form">
+                              <form id="city-form">
+                                  <input type="text" id="city-input" placeholder="Search for a city..."/>
+                              </form>
+                        </div>
+
+                        <div class="col-md-4">
+                              <form id="city-form">
+                                  <input type="submit" value="Search" class="btn btn-primary "> 
+                              </form>
+                        </div>
+
+
+
+                        
+
+                  </div>
+
+              </div>
+        </div>
+    
+
+
+
+
+
+    <div class="card-body" >
+        <div class="container">
+            <div class="row g-0">
+                        <div class="col-md-8">
+                                    <div class="card-body">
+                                            <h5 id="temperature" class="card-title">23ºC</h5>
+                                            <h4 id="city-display">Lisbon, Portugal</h4>
+                                            <h6 id="current-time"></h6>
+                                    </div>
+                        </div>
+                        <div class="col-md-4">
+                                    <div class="card-body">
+                                    <img src="images/sunny.png"  width="100px"/>
+                                    </div>
+                        </div>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  
-    <script src="scr/app.js"></script>
+
+          
+
+
+ <small>
+         This project was coded by Paula Fonseca and is open-sourced on <a
+            href="https://github.com/fonsecapaulacf/Vanilla-Weather-Project"
+            target="_blank">GitHub</a> and hosted on <a
+            href=""
+            target="_blank">Netlify
+  </small>
+
+</div>
+
+
+
+
+</div>
+
+
+<script src="scr/app.js"></script>
   </body>
 </html>
