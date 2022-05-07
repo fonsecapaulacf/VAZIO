@@ -1,34 +1,40 @@
 body {
-background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%); 
-margin: 100px auto;
-max-width: 800px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  margin: 100px auto;
+  max-width: 800px;
 }
 
-input{
-    border-style: none;
-    background-color:whitesmoke;
-    border-radius: 20px;
-    padding: 10px;
+input {
+  border-style: none;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 10px;
 }
 
-.weather-app-wrapper{
-padding: 30px;
-background:white ;
-border-style:none ;
-border-radius: 10px;
+#temperature {
+  font-size: 50px;
 }
 
+.weather-app-wrapper {
+  padding: 30px;
+  background: white;
+  border-style: none;
+  border-radius: 10px;
+}
 
 .search-button {
   text-align: right;
 }
 .search-form {
   text-align: left;
-  
 }
 
-.btn{
-    padding:10px;
-    text-align: right;
-    border-radius: 10px;
+.btn {
+  padding: 10px;
+  text-align: right;
+  border-radius: 10px;
 }
