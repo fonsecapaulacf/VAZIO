@@ -79,5 +79,6 @@ function submitCity(event) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   return currentCity;
 }
+
 let getCity = document.querySelector("#city-form");
 getCity.addEventListener("submit", submitCity);

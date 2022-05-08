@@ -8,6 +8,10 @@ body {
   max-width: 800px;
 }
 
+h4{
+    color: grey;
+}
+
 input {
   border-style: none;
   background-color: whitesmoke;
@@ -15,9 +19,30 @@ input {
   padding: 10px;
 }
 
+#current-time{
+   color:salmon
+}
+
+#celsius-link{
+    color: rgb(255, 49, 221);
+    text-decoration: none;
+}
+
+#fahrenheit-link{
+    color: coral;
+    text-decoration: none;
+}
+
 #temperature {
+    color: grey;
   font-size: 50px;
 }
+
+#city-display{
+    font-size: 50px;
+    padding: 20px;
+}
+
 
 .weather-app-wrapper {
   padding: 30px;
