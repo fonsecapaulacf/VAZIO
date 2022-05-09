@@ -26,11 +26,13 @@ input {
 #celsius-link{
     color: rgb(255, 49, 221);
     text-decoration: none;
+    padding: 5px;
 }
 
 #fahrenheit-link{
     color: coral;
     text-decoration: none;
+    padding: 5px;
 }
 
 #temperature {

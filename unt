@@ -1,3 +1,16 @@
 #To add the HTML and CSS for forecast                   HTML/CSS
 #To add the API call to get the forecast                        API
 #To replace the dummy content with real data                JS 
+
+<div class="row">
+     <div class="col-2">
+            <div class="weather-forecast-date">
+                Thursday
+            </div>
+            <img
+                src="images/sunny.png" alt="" width="42"/> <br/>
+                <div class="weather-forecast-temperatures"><span class="weather-forecast-temperature-max">18º</span> 
+                  <span class="weather-forecast-temperature-min">13º</span>
+            </div>
+          </div>
+</div>

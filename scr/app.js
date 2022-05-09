@@ -23,8 +23,48 @@ function formatDate(date) {
   let formattedDate = `${currentDay} ${currentHour}:${currentMinutes},`;
   return formattedDate;
 }
+
 let elementDate = document.querySelector("#current-time");
 elementDate.innerHTML = formatDate(currentTime);
+
+//
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  
+
+let days=["Thu", "Fri", "Sat", "Sun"];
+let forecastHTML = `<div class="row">`;
+
+days.forEach(function(day){
+
+        forecastHTML = forecastHTML +
+          `
+                <div class="col-2">
+                        <div class="weather-forecast-date">
+                            ${day}
+                        </div>
+                        <img
+                            src="images/sunny.png" alt="" width="42"/> <br/>
+                            <div class="weather-forecast-temperatures">
+                            <span class="weather-forecast-temperature-max">18º</span> 
+                            <span class="weather-forecast-temperature-min">13º</span>
+                            </div>
+                </div>
+            `;
+
+});
+  
+forecastHTML=forecastHTML + `</div>`;
+
+  forecastElement.innerHTML =forecastHTML;
+
+  console.log(forecastHTML);
+}
+
+displayForecast();
+
 
 //
 
@@ -40,16 +80,20 @@ function showTemperature(response) {
     let temperatureFElement = document.querySelector("#temperature");
     temperatureFElement.innerHTML = `${temperatureF}ºF`;
   }
+
   function convertToCelsius(event) {
     event.preventDefault();
     let temperatureCElement = document.querySelector("#temperature");
     temperatureCElement.innerHTML = `${temperatureC}ºC`;
   }
+//
   let fahrenheitLink = document.querySelector("#fahrenheit-link");
   fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
   let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", convertToCelsius);
+
+//
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -68,6 +112,13 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+
+
+
+///
+
+///
+
 function submitCity(event) {
   event.preventDefault();
   let currentCityWeather = document.querySelector("#city-input");
@@ -82,3 +133,5 @@ function submitCity(event) {
 
 let getCity = document.querySelector("#city-form");
 getCity.addEventListener("submit", submitCity);
+
+
