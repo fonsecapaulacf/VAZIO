@@ -16,103 +16,61 @@
     <script src="https://kit.fontawesome.com/d1e4f91c51.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      
+
+    
 <div class="container">
-
-
-
-<div class="weather-app-wrapper">
-
-
-    
-        <div class="card-body">
-              <div class="container">
-
-                  <div class="row">
-
-                        <div class="col-8 search-form">
-                              <form id="city-form">
-                                  <input type="search" id="city-input" placeholder="Enter a city..." autocomplete="off" />
-                              </form>
-                        </div>
-
-                        <div class="col-4 ">
-                              <form id="city-form">
-                                  <input type="submit" value="Search" class="btn btn-outline-secondary btn-lg btn-block "> 
-                              </form>
-                        </div>
-
-
-
-                        
-
-                  </div>
-
+      <div class="weather-app-wrapper">
+              
+              <div class="card-body">
+                    <div class="container">
+                          <div class="row">
+                                <div class="col-9 ">
+                                      <form id="city-form">
+                                            <input type="text" autocapitalize="words"autofocus  id="city-input" placeholder="Enter a city..."   />
+                                      </form>
+                                </div>
+                                <div class="col-3 ">
+                                      <form id="city-form">
+                                            <input type="submit" value="Search" class="btn btn-outline-secondary btn-lg btn-block"> 
+                                      </form>
+                                </div>
+                          </div>
+                    </div>
               </div>
-        </div>
     
-
-
-
-
-
-    <div class="card-body" >
-        <div class="container">
-            <div class="row g-0">
-
-                        <div class="col-md-6">
-                                    <div class="card-body">
-                                            
+              <div class="card-body" >
+                    <div class="container">
+                          <div class="row g-0">
+                                <div class="col-md-6">
+                                      <div class="card-body">
                                             <h4 id="city-display">Lisbon</h4>
-                                            <span id="current-time"></span>
-                                            <span id="description">sunny</span>   </br>
-                                            Humidity: <span id="humidity">30</span>% , Wind: <span id="wind">2.57 </span>km/h
+                                                  <div class="smallInfo"><span id="current-time"></span>
 
-                                    </div>
-                        </div>
+                                                  </br><span id="description">sunny</span>  </div> 
+                                                  <div class="smallInfo2"> Humidity: <span id="humidity">30</span>% , Wind: <span id="wind">2.57 </span>km/h</div>
+                                      </div>
+                                </div>
+                                <div class="col-md-6">
+                                      <div class="card-body bigIcons">
+                                            <span id="temperature" class="card-title">23ºC</span> 
+                                            </br>
+                                            <img src="images/sunny.png" alt="Clear" id="icon" width="100px"/>
+                                      </div>
+                                </div>
+                          </div>
+                    </div>
+                    <div class="weather-forecast" id="forecast"></div>          
 
-                        <div class="col-md-6">
-                              <div class="card-body">
-                                      <span id="temperature" class="card-title">23ºC</span> 
-                                      </br>
-                                      <span class="units">
-                                        <a href="#" id="celsius-link">ºC</a> | 
-                                        <a href="#" id="fahrenheit-link">ºF</a>
-                                      </br>
-                                      </span>
-                                    <img src="images/sunny.png" alt="Clear" id="icon" width="100px"/>
-                                    </div>
-                        </div>
-            </div>
-        </div>
+                    <div id="info"><small>   This project was coded by Paula Fonseca and is open-sourced on <a class="gitLink"
+                    href="https://github.com/fonsecapaulacf/Vanilla-Weather-Project"
+                    target="_blank">GitHub</a> and hosted on <a class="netLink"
+                    href=""
+                    target="_blank">Netlify</a>.</small></div>
 
-
-
-
-    <div class="weather-forecast" id="forecast">
-  </div>          
-
-
-
-
-
-
- <small>
-         This project was coded by Paula Fonseca and is open-sourced on <a
-            href="https://github.com/fonsecapaulacf/Vanilla-Weather-Project"
-            target="_blank">GitHub</a> and hosted on <a
-            href=""
-            target="_blank">Netlify
-  </small>
-
-</div>
-
-
-
-
+      </div>
 </div>
 
 
 <script src="scr/app.js"></script>
-  </body>
+</body>
 </html>

@@ -1,5 +1,4 @@
 ///DATE AND HOUR
-
 let currentTime = new Date();
 function formatDate(date) {
   let days = [
@@ -10,7 +9,6 @@ function formatDate(date) {
     "Thursday",
     "Friday",
     "Saturday"];
-
   let currentDay = days[date.getDay()];
   let currentHour = currentTime.getHours();
         if (currentHour < 10) {
@@ -18,34 +16,29 @@ function formatDate(date) {
   let currentMinutes = currentTime.getMinutes();
         if (currentMinutes < 10) {
             currentMinutes = `0${currentMinutes}`;}
-  let formattedDate = `${currentDay} ${currentHour}:${currentMinutes},`;
+  let formattedDate = `${currentDay} ${currentHour}:${currentMinutes}`;
   return formattedDate;
 }
 let elementDate = document.querySelector("#current-time");
 elementDate.innerHTML = formatDate(currentTime);
-
 /////////
 
+
+
+
+
+///////////////////////////////////////
 function formatDay(timestamp){
 let date= new Date(timestamp *1000);
 let day=date.getDay();
 let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-
     return days[day];
 }
-
-
-
-
 /////  DISPLAY TEMPERATURES PER WEEK DAYS
-
 function displayForecast(response) {
     let forecast=response.data.daily;
-
     let forecastElement = document.querySelector("#forecast");
-
-let forecastHTML = `<div class="row">`;
-
+    let forecastHTML = `<div class="row">`;
 forecast.forEach(function(forecastDay, index){
     if (index<6) {
       forecastHTML =
@@ -73,18 +66,12 @@ forecastHTML=forecastHTML + `</div>`;
 forecastElement.innerHTML =forecastHTML;
 }
 
-/////////
-
 function getForecast(coordinates){
     console.log(coordinates);
     let apiKey="b0661e5e22b852583e44461d886f5f6a";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
 }
-
-
-
-
 
 /////   DISPLAY CURRENT TEMPERATURES PER CITY
 
@@ -110,41 +97,11 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-
-
 getForecast(response.data.coord);
 }
 
-
-
-
-
-
-
-////UNIT CONVERSION
-
-  function convertToFahrenheit(event) {
-    event.preventDefault();
-    let temperatureFElement = document.querySelector("#temperature");
-    temperatureFElement.innerHTML = `${temperatureF}ºF`;
-  }
-  function convertToCelsius(event) {
-    event.preventDefault();
-    let temperatureCElement = document.querySelector("#temperature");
-    temperatureCElement.innerHTML = `${temperatureC}ºC`;
-  }
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", convertToFahrenheit);
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", convertToCelsius);
-
-
-
-
-
-
-
 ///SUBMIT THE WEATHER OF THE CITY YOU'VE SEARCHED FOR + API
+
 
 function submitCity(event) {
   let currentCityWeather = document.querySelector("#city-input");
@@ -155,6 +112,7 @@ function submitCity(event) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
   return currentCity;
 }
+
 let getCity = document.querySelector("#city-form");
 getCity.addEventListener("submit", submitCity);
 
