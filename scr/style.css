@@ -1,35 +1,20 @@
 body {
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background: radial-gradient(circle at 10% 20%,rgb(254, 255, 165) 0%,rgb(255, 232, 182) 90%);
+        background: #f9f7fe;
         margin: 100px auto;
-        max-width: 800px;
+        max-width: 900px;
 }
 
 h4{
         text-transform: capitalize;
-        color: rgb(243, 128, 57);
+        color:#EC6E4C;
 }
 
 input {
-        border-style: none;
+        border-style:none;
         background-color: rgb(243, 243, 243);
         border-radius: 6px;
         padding: 10px;
-}
-
-#info{
-   color:burlywood;
-   margin: 2px;
-   text-align: center;
-}
-
-#current-time{
-   color:salmon
-}
-
-#temperature {
-    color: grey;
-  font-size: 50px;
 }
 
 #city-display{
@@ -44,23 +29,44 @@ input {
     width: 100%;
 }
 
-.gitLink{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.261);
+#current-time{
+   color:#EC6E4C;
 }
 
-.smallInfo{
-    padding: 5px;
-    text-align: center;
+#info{
+   color:#EC6E4C;
+   margin: 2px;
+   text-align: center;
 }
 
-.smallInfo2{
-    padding: 5px;
-    text-align: center;
+#temperature {
+    color: grey;
+    font-size: 50px;
 }
 
 .bigIcons{
     text-align: center;
+}
+
+.btn {
+background-color:rgb(248, 212, 135) ;
+color: white;
+width: 100%;
+font-size: 17px;
+font-weight: bold;
+height: 50px;
+text-align: center;
+border-radius: 6px;
+border-style: none;
+}
+
+btn:hover{
+    color: #EC6E4C;
+}
+
+.gitLink{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.261);
 }
 
 .netLink{
@@ -68,26 +74,27 @@ input {
     color: rgba(0, 0, 0, 0.261);
 }
 
-.btn {
-background-color:rgb(255, 232, 182) ;
-width: 100%;
-font-size: 15px;
-height: 50px;
-text-align: center;
-border-radius: 6px;
-border-style: none;
+.smallInfo{
+    padding: 5px;
+    text-align: center;
+    
+}
+
+.smallInfo2{
+    opacity:0.5 ;
+    padding: 5px;
+    text-align: center;
 }
 
 .weather-app-wrapper {
   padding: 30px;
-  background: white;
-  border-style: none;
-  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  border: #dadde1;
 }
 
 .weather-forecast{
-    margin-top: 20px ;
-    margin-bottom: 30px;
+    margin-top: 40px ;
+    margin-bottom: 50px;
     text-align: center;
     color: black;
 }
@@ -98,9 +105,13 @@ opacity:0.5 ;
 }
 
 .weather-forecast-temperatures{
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .weather-forecast-temperature-min{
-    opacity:0.5;
+    opacity:0.7;
+}
+
+.weather-forecast-temperature-max{
+    color:#EC6E4C;
 }
