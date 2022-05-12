@@ -1,18 +1,20 @@
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background: radial-gradient(circle at 10% 20%,rgb(254, 255, 165) 0%,rgb(255, 232, 182) 90%);
-  margin: 100px auto;
-  max-width: 800px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: radial-gradient(circle at 10% 20%,rgb(254, 255, 165) 0%,rgb(255, 232, 182) 90%);
+        margin: 100px auto;
+        max-width: 800px;
 }
+
 h4{
-    text-transform: capitalize;
-    color: rgb(243, 128, 57);
+        text-transform: capitalize;
+        color: rgb(243, 128, 57);
 }
+
 input {
-  border-style: none;
-  background-color: rgb(243, 243, 243);
-  border-radius: 6px;
-  padding: 10px;
+        border-style: none;
+        background-color: rgb(243, 243, 243);
+        border-radius: 6px;
+        padding: 10px;
 }
 
 #info{
@@ -20,48 +22,11 @@ input {
    margin: 2px;
    text-align: center;
 }
-.gitLink{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.261);
-}
-.smallInfo{
-    padding: 5px;
-    text-align: center;
-}
-
-.smallInfo2{
-    padding: 5px;
-    text-align: center;
-}
-
-
-.bigIcons{
-    text-align: center;
-}
-
-.netLink{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.261);
-}
-
-#city-input{
-    font-size: 15px;
-    height:50px;
-    width: 100%;
-}
-.btn {
-background-color:rgb(255, 232, 182) ;
-width: 100%;
-font-size: 15px;
-height: 50px;
-text-align: center;
-border-radius: 6px;
-border-style: none;
-}
 
 #current-time{
    color:salmon
 }
+
 #temperature {
     color: grey;
   font-size: 50px;
@@ -73,7 +38,45 @@ border-style: none;
     padding: 20px;
 }
 
+#city-input{
+    font-size: 15px;
+    height:50px;
+    width: 100%;
+}
 
+.gitLink{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.261);
+}
+
+.smallInfo{
+    padding: 5px;
+    text-align: center;
+}
+
+.smallInfo2{
+    padding: 5px;
+    text-align: center;
+}
+
+.bigIcons{
+    text-align: center;
+}
+
+.netLink{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.261);
+}
+
+.btn {
+background-color:rgb(255, 232, 182) ;
+width: 100%;
+font-size: 15px;
+height: 50px;
+text-align: center;
+border-radius: 6px;
+border-style: none;
+}
 
 .weather-app-wrapper {
   padding: 30px;
@@ -81,7 +84,6 @@ border-style: none;
   border-style: none;
   border-radius: 10px;
 }
-
 
 .weather-forecast{
     margin-top: 20px ;
