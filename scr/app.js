@@ -87,7 +87,7 @@ function showTemperature(response) {
 function search(city) {
         let apiKey = "b0661e5e22b852583e44461d886f5f6a";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+        axios.get(`${apiUrl}`).then(showTemperature);
 }
   
 function handleSubmit(event){
@@ -95,6 +95,8 @@ function handleSubmit(event){
         let cityInputElement = document.querySelector("#city-input");
         search(cityInputElement.value);
 }
+
 let getCity = document.querySelector("#city-form");
 getCity.addEventListener("submit", handleSubmit);
+
 search("Lille");
