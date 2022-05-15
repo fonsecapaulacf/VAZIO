@@ -96,7 +96,7 @@ function handleSubmit(event){
         search(cityInputElement.value);
 }
 
-let getCity = document.querySelector("#city-form");
+let getCity = document.querySelector("#search-form");
 getCity.addEventListener("submit", handleSubmit);
 
 search("Lille");
